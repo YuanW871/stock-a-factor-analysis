@@ -290,7 +290,7 @@ pos_ratio = (ic > 0).mean()
 print({"N_days": n, "IC_mean": ic_mean, "IC_std": ic_std,
        "t_stat": t_stat, "ICIR": icir, "Pos_ratio(IC>0)": pos_ratio})
 
-# 时序与滚动均值
+### 时序与滚动均值
 plt.figure(figsize=(10,4))
 ic_series.plot(linewidth=1, label="Daily IC")
 ic_series.rolling(ROLL_WIN, min_periods=max(5, ROLL_WIN//5)).mean() \
